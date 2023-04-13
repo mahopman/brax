@@ -78,7 +78,7 @@ def getTrainFunc(
 			checkpoint_logdir: Optional[str] = None,
 			eval_env: Optional[envs.Env] = None):
 
-			return sacTrain(
+			return sacTrain.train(
 				environment = environment,
 				num_timesteps = num_timesteps,
 				episode_length = episode_length,
@@ -132,7 +132,7 @@ def getTrainFunc(
 				action_size = action_size,
 				preprocess_observations_fn = preprocess_observations_fn,
 				policy_hidden_layer_sizes = policy_hidden_layer_sizes,
-    			value_hidden_layer_sizes = value_hidden_layer_sizes,
+				value_hidden_layer_sizes = value_hidden_layer_sizes,
 				activation = activationFunc)
 
 		def trainFunc(
@@ -162,7 +162,7 @@ def getTrainFunc(
 			eval_env: Optional[envs.Env] = None,
 			policy_params_fn: Callable[..., None] = lambda *args: None):
 
-			return ppoTrain(
+			return ppoTrain.train(
 				environment = environment,
 				num_timesteps = num_timesteps,
 				episode_length = episode_length,
