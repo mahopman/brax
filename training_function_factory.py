@@ -6,7 +6,7 @@ from brax import envs
 from brax.v1 import envs as envs_v1
 from brax.training.agents.ppo import train as ppoTrain, networks as ppoNetworks
 from brax.training.agents.sac import train as sacTrain, networks as sacNetworks
-from brax.training import types, networks
+from brax.training import types
 
 from flax.linen import swish, relu
 
