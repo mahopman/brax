@@ -104,7 +104,7 @@ def getTrainFunc(
 				eval_env = eval_env)
 
 		return functools.partial(
-			func = trainFunc,
+			trainFunc,
 			num_timesteps = num_timesteps,
 			num_evals = num_evals,
 			reward_scaling = reward_scaling,
@@ -191,7 +191,7 @@ def getTrainFunc(
 				policy_params_fn = policy_params_fn)
 
 		return functools.partial(
-			func = trainFunc,
+			trainFunc,
 			num_timesteps = num_timesteps,
 			num_evals = num_evals,
 			reward_scaling = reward_scaling,
